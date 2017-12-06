@@ -12,10 +12,11 @@ import fr.gd.irc.entities.Message;
 @CrossOrigin
 @RepositoryRestResource(collectionResourceRel = "message", path = "message")
 // collectionResourceRel = liens vers la table de la base "message"
-// path= chemin dans l'url message
+// path= chemin dans l'url /message
 
+// interface de type DAO appelé ici repository
 public interface MessageRepository extends CrudRepository<Message, Integer> {
-
+	// Le Message le integer correspond à la primary key
 	List<Message> findByText(@Param("text") String text);
 
 }
