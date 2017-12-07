@@ -14,6 +14,8 @@ import fr.gd.irc.entities.User;
 @RepositoryRestResource(collectionResourceRel = "user", path = "user")
 // collectionResourceRel = liens vers la table de la base "user"
 // path= chemin dans l'url user
+//l'url qui permet d'accéder donc à cette entité "user" sera donc, dans le cadre d'un serveur local,
+//http://localhost:8080/api/user
 
 public interface UserRepository extends CrudRepository<User, Integer>, Serializable {
 
